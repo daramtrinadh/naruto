@@ -1,0 +1,17 @@
+.navbar{
+    display:flex;
+    flex-direction: row;
+    padding:10px;
+    background-color: black;
+}
+.brand-name{
+    font-weight:700px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(249, 115, 22);
+    size:20px;
+    line-height:28px;
+    
+}
+.link{
+    text-decoration: none;
+}

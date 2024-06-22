@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+
+
+.character-details-section {
+    padding: 20px;
+    background-color: black;
+    width: 100%;
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: center;
+}
+
+.character-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.character-detail-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #f76c6c;
+    transition: transform 0.3s;
+}
+
+.character-detail-image:hover {
+    transform: scale(1.05);
+}
+
+.character-detail-name {
+    font-family: 'Caveat', cursive;
+    font-size: 3em;
+    color: whitesmoke;
+    margin-top: 20px;
+}
+
+.character-info {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.character-info h2 {
+    color: #f76c6c;
+    border-bottom: 2px solid #f76c6c;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.character-info p, .character-info ul {
+    margin: 10px 0;
+    color: #555;
+}
+
+.character-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.character-info ul li {
+    margin: 5px 0;
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 20px;
+}
+
+.loading img {
+    width: 100px;
+    height: 100px;
+}
+
+.error h1 {
+    font-size: 1.5em;
+    color: #f76c6c;
+}
+
+.error p {
+    color: #555;
+}
+
+@media (max-width: 1200px) {
+    .character-details {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .character-detail-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .character-detail-name {
+        font-size: 2.5em;
+    }
+
+    .character-info {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .character-detail-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .character-detail-name {
+        font-size: 2em;
+    }
+
+    .character-info {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .character-detail-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .character-detail-name {
+        font-size: 1.8em;
+    }
+}
+@media screen (min-width:320px){
+    .character-details{
+        width:100%;
+    }
+    
+}

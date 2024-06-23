@@ -10,7 +10,7 @@ const apiConstraints = {
     failed: 'failed'
 };
 
-const CharacterItemDetails = () => {
+const AkatsukiItemDetails = () => {
     const { id } = useParams();
     const [apiStatus, setStatus] = useState({
         status: apiConstraints.initial,
@@ -22,7 +22,7 @@ const CharacterItemDetails = () => {
         const fetchCharacterDetails = async () => {
             setStatus((prevState) => ({ ...prevState, status: apiConstraints.loading, data: null, error: null }));
 
-            const url = `https://narutodb.xyz/api/character/${id}`;
+            const url = `https://narutodb.xyz/api/akatsuki/${id}`;
             const options = {
                 method: 'GET'
             };
@@ -122,7 +122,7 @@ const CharacterItemDetails = () => {
                             )}
                             {data.personal.bloodType && <p><strong>Blood Type:</strong> {data.personal.bloodType}</p>}
 
-                            {/* {data.personal.kekkeiGenkai && Array.isArray(data.personal.kekkeiGenkai) && data.personal.kekkeiGenkai.length > 1 && (
+                            {data.personal.kekkeiGenkai && data.personal.kekkeiGenkai.length > 0 && (
                                 <>
                                     <h2>Kekkei Genkai</h2>
                                     <ul>
@@ -131,9 +131,9 @@ const CharacterItemDetails = () => {
                                         ))}
                                     </ul>
                                 </>
-                            )} */}
+                            )}
 
-                            {data.personal.classification  && data.personal.classification.length > 0 && (
+                            {data.personal.classification && data.personal.classification.length > 0 && (
                                 <>
                                     <h2>Classification</h2>
                                     <ul>
@@ -173,7 +173,7 @@ const CharacterItemDetails = () => {
                                 </>
                             )}
 
-                            {/* {data.personal.team && Array.isArray(data.personal.team) && data.personal.team.length > 0 && (
+                            {data.personal.team && data.personal.team.length > 0 && (
                                 <>
                                     <h2>Teams</h2>
                                     <ul>
@@ -182,7 +182,7 @@ const CharacterItemDetails = () => {
                                         ))}
                                     </ul>
                                 </>
-                            )} */}
+                            )}
                         </>
                     )}
 
@@ -251,7 +251,7 @@ const CharacterItemDetails = () => {
         </div>
     );
 
-    const renderCharacterDetails = () => {
+    const renderAkatsukiDetails = () => {
         const { status } = apiStatus;
         switch (status) {
             case apiConstraints.success:
@@ -269,10 +269,10 @@ const CharacterItemDetails = () => {
         <>
             <Navbar />
             <div className="character-details-section">
-                {renderCharacterDetails()}
+                {renderAkatsukiDetails()}
             </div>
         </>
     );
 };
 
-export default CharacterItemDetails;
+export default AkatsukiItemDetails;

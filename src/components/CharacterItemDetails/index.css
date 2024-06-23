@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
-
-
-
 .character-details-section {
     padding: 20px;
     background-color: black;
@@ -134,10 +131,4 @@
     .character-detail-name {
         font-size: 1.8em;
     }
-}
-@media screen (min-width:320px){
-    .character-details{
-        width:100%;
-    }
-    
 }

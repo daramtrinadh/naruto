@@ -10,7 +10,7 @@ const apiConstraints = {
     failed: 'failed'
 };
 
-const CharacterItemDetails = () => {
+const TailedBeastDetails = () => {
     const { id } = useParams();
     const [apiStatus, setStatus] = useState({
         status: apiConstraints.initial,
@@ -133,7 +133,7 @@ const CharacterItemDetails = () => {
                                 </>
                             )} */}
 
-                            {data.personal.classification  && data.personal.classification.length > 0 && (
+                            {/* {data.personal.classification  && data.personal.classification.length > 0 && (
                                 <>
                                     <h2>Classification</h2>
                                     <ul>
@@ -171,7 +171,7 @@ const CharacterItemDetails = () => {
                                         ))}
                                     </ul>
                                 </>
-                            )}
+                            )} */}
 
                             {/* {data.personal.team && Array.isArray(data.personal.team) && data.personal.team.length > 0 && (
                                 <>
@@ -251,7 +251,7 @@ const CharacterItemDetails = () => {
         </div>
     );
 
-    const renderCharacterDetails = () => {
+    const renderTailedBeastData = () => {
         const { status } = apiStatus;
         switch (status) {
             case apiConstraints.success:
@@ -269,10 +269,10 @@ const CharacterItemDetails = () => {
         <>
             <Navbar />
             <div className="character-details-section">
-                {renderCharacterDetails()}
+                {renderTailedBeastData()}
             </div>
         </>
     );
 };
 
-export default CharacterItemDetails;
+export default TailedBeastDetails;

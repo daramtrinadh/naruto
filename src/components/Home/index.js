@@ -15,38 +15,29 @@ const Home=()=>(
             <div className='card-items'>
                 <Link to='/characters' className='link'>
                     <div className="character-card">
-                        <img src='https://narutodb.xyz/cards/characters.jpg' alt='characters' className="character-image" />
+                        <img src='https://narutodb.xyz/cards/teams.webp' alt='characters' className="character-image" />
                         <div className="character-info">
                             <h3 className="character-name">Characters</h3>
                         </div>
                     </div>
                 </Link>
-                <div className="character-card">
-                    <img src='https://narutodb.xyz/cards/akatsuki.jpg' alt='characters' className="character-image" />
-                    <div className="character-info">
-                        <h3 className="character-name">Akatsuki</h3>
+                <Link to="/akatsuki" className='link'>
+                    <div className="character-card">
+                        <img src='https://narutodb.xyz/cards/akatsuki.jpg' alt='akatsuki' className="character-image" />
+                        <div className="character-info">
+                            <h3 className="character-name">Akatsuki</h3>
+                        </div>
                     </div>
-                </div>
-                <div className="character-card">
-                    <img src='https://narutodb.xyz/cards/tailedbeasts.webp' alt='characters' className="character-image" />
-                    <div className="character-info">
-                        <h3 className="character-name">Tailed Beasts</h3>
+                </Link>
+                <Link to="/tailedbeasts" className='link'>
+                    <div className="character-card" >
+                        <img src='https://narutodb.xyz/cards/tailedbeasts.webp' alt='tailedBeasts' className="character-image" />
+                        <div className="character-info">
+                            <h3 className="character-name">Tailed Beasts</h3>
+                        </div>
                     </div>
-                </div>
-                <div className="character-card">
-                    <img src='https://narutodb.xyz/cards/teams.webp' alt='characters' className="character-image" />
-                    <div className="character-info">
-                        <h3 className="character-name">Teams</h3>
-                    </div>
-                </div>
-                <div className="character-card">
-                    <img src='https://narutodb.xyz/cards/clans.jpeg' alt='characters' className="character-image" />
-                    <div className="character-info">
-                        <h3 className="character-name">Clans</h3>
-                    </div>
-                </div>
-            </div>
-            
+                </Link>
+            </div> 
         </div>
     </div>
 )
